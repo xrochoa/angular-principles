@@ -87,7 +87,7 @@ Forms are so common in any web application and developers tend to repeat their p
 
 After starting a new project using sass as explained in the setup section, you can add an `scss` folder under the `source` folder. This folder will contain global styling modules and a variables file that you can import to your `styles.scss` master file. Each Angular component will also generate a sass file for component-specific-styles. In this way any code refactoring can be moved to a global style. BEM is a pattern that might be great to use for global styles. Component style classes are handled by Angular so [BEM](http://getbem.com/) is not needed but you might want to consider it for consistency.
 
-![image alt text](image_1.png)
+![image alt text](1.png)
 
 We really like to use [Angular Material](https://material.angular.io/) which comes with many common components like modals, sidenavs, tables, buttons. etc. Bootstrap and Foundation can also be used but we recommend choosing Angular specific libraries like [Prime Faces](https://www.primefaces.org/primeng/) from the UI Components in [Angular Resources](https://angular.io/resources).
 
