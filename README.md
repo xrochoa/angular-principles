@@ -6,7 +6,7 @@
 
 This document will provide general recommendations and links for common scenarios encountered when building a complex web application with Angular. Here at Fresh we have build many Angular apps successfully and this guide should help address many of those situations. Here are the topics covered:
 
-Learning Resources
+[Learning Resources](#learning_resources)
 
 Setup
 
@@ -24,7 +24,7 @@ Code Style
 
 Automation
 
-## Learning Resources
+## <a id="learning_resources"><a/>Learning Resources
 
 Angular 2 was rebranded as [Angular](https://angular.io/) since it is so different from Angular 1 or [AngularJS](https://angularjs.org/). The versions 2 - 5 and beyond should refer to Angular and not AngularJS. You should definitely have a good understanding of Javascript, HTML, CSS. Ideally you also know about NPM, Sass, and terminal (Bash or Powershell). You can start by taking the [Tour of Heroes Tutorial](https://angular.io/tutorial) if you haven’t already done so. There are [plenty of free learning resources](https://github.com/jmcunningham/AngularJS2-Learning) online. Some of our favorite ones are:
 
