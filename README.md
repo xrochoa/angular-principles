@@ -99,11 +99,11 @@ It is recommended to follow Javascript best practices and follow the [Angular St
 
 Here is a summary of the naming section in the Angular Style Guide.
 
-* Apply the single responsibility principle (SRP)
+### Apply the single responsibility principle (SRP)
 
-    * Rule of One
+#### Rule of One
 
-        * One thing per file (a service/component should focus on one thing only)
+- [ ] One thing per file (a service/component should focus on one thing only)
 
         * 400 lines max per file
 
@@ -111,7 +111,7 @@ Here is a summary of the naming section in the Angular Style Guide.
 
         * 75 lines max per function
 
-* Naming
+## Naming
 
     * General
 
