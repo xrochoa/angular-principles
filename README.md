@@ -1,4 +1,5 @@
 # Angular 5 Principles
+![image alt text](https://angular.io/assets/images/logos/angular/angular.png)
 
 ## Introduction
 
