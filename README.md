@@ -3,9 +3,9 @@
 
 ## Introduction
 
-[Angular](https://angular.io/) has become one of the most used frameworks to build modern web apps. It solves many problems of building complex apps, it is very popular, it is backed up by Google but it can have a steep learning curve compared to other frameworks. Other frameworks like [React](https://reactjs.org/) and [Vue.js](https://vuejs.org/) are also used to build web apps but are less opinionated and each of these frameworks come with their [pros and cons](https://www.academind.com/articles/javascript/angular-vs-reactjs-vs-vuejs/). You can compare their current popularity through [Stack Overflow Trends](https://insights.stackoverflow.com/trends?tags=jquery%2Cangularjs%2Cangular%2Creactjs).
+[Angular](https://angular.io/) has become one of the most used frameworks to build modern web apps. It solves many problems of enterprise apps, it is very popular, it is backed up by Google and it can have a steep learning curve compared to other frameworks. Other frameworks like [React](https://reactjs.org/) and [Vue.js](https://vuejs.org/) are also used to build web apps but are less opinionated and each of these frameworks come with their [pros and cons](https://www.academind.com/articles/javascript/angular-vs-reactjs-vs-vuejs/). You can compare their current popularity through [Stack Overflow Trends](https://insights.stackoverflow.com/trends?tags=jquery%2Cangularjs%2Cangular%2Creactjs).
 
-This document will provide general recommendations and links for common scenarios encountered when building a complex web application with Angular. Here at Fresh we have build many Angular apps successfully and this guide should help address many of those situations. Here are the topics covered:
+This document will provide general recommendations and links for common scenarios encountered when building a complex web application with Angular. Here at [Fresh Consulting](https://www.freshconsulting.com/) we have build many Angular apps successfully and this guide should help address many of those situations. Here are the topics covered:
 
 [Learning Resources](#resources)
 
@@ -47,13 +47,11 @@ Angular 2 was rebranded as [Angular](https://angular.io/) since it is so differe
 
 For the smoothest experience use the official [Angular-CLI](https://cli.angular.io/). To install it from the command line you need to have [Node.js](https://nodejs.org/en/) which comes with [NPM](https://www.npmjs.com/) to manage your libraries/dependencies. It will create a project, scaffold the main files, setup unit and e2e testing and it has a lot of useful utilities that you can see in their [documentation](https://github.com/angular/angular-cli/wiki).
 
-We prefer to setup a project using [Sass](http://sass-lang.com/) instead of css since it will improve your styling workflow.
-
-Run the command ng new [my _new_project _name] --style sass in your prefered folder.
+We prefer to setup a project using [Sass](http://sass-lang.com/) instead of CSS since it will improve your styling workflow. Run the command `ng new [my _new_project _name] --style sass` in your prefered folder to start using Sass.
 
 ## <a id="files"><a/>File Organization
 
-The CLI already provides a basic structure for your app. It is recommended that you use the structure suggested in [Stack Overflow](https://stackoverflow.com/questions/35346342/which-type-of-folder-structure-should-be-used-with-angular-2). In a summary.
+The CLI already provides a basic structure for your app but you will have to make some decisions about the structure when the app gets more complex. It is recommended that you use the structure suggested in [Stack Overflow](https://stackoverflow.com/questions/35346342/which-type-of-folder-structure-should-be-used-with-angular-2). Here is a summary of it:
 
 1. A source folder with contain the codebase with index.html, main.ts file and the core, shared folders.
 
