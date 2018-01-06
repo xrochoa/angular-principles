@@ -53,19 +53,19 @@ We prefer to setup a project using [Sass](http://sass-lang.com/) instead of CSS 
 
 The CLI already provides a basic structure for your app but you will have to make some decisions about the structure when the app gets more complex. It is recommended that you use the structure suggested in [Stack Overflow](https://stackoverflow.com/questions/35346342/which-type-of-folder-structure-should-be-used-with-angular-2). Here is a summary of it:
 
-1. A source folder with contain the codebase with `index.html`, `main.ts` file and the `core`, `shared` folders.
+1. A source folder will contain `index.html` file, `main.ts` file and the `app` folder which ontains the `core` and `shared` folders.
 
-2. Things that are always visible or used everywhere can go to the core folder (a footer component or an exception handler service).
+2. Things that are always visible or used everywhere can go to the `core` folder (a footer component or an exception handler service).
 
-3. Components that are related with the URL can be nested in the `src` folder. Example URL [www.mywebsite.com/heroes/6545](www.mywebsite.com/hero/6545) can have the folder `heroes` with the `heroes.component.ts` and inside this folder we can have the folder `hero-item` with the component `hero-item.ts` which refers to the individual item. Remember that having too many nested components will come at a price. If you see this, consider flattening your structure.
+3. Services will go in the related component folder or in `shared/services` if it is shared. Consider adding a `directives`, `animations` and `pipes` folders in shared to reuse those features too.
 
-4. Services can be in the closest related component or the `shared` folder in a `services` folder.
+4. Components that are related with the URL can be nested in the `src` folder. Example URL [www.mywebsite.com/heroes/6545](www.mywebsite.com/hero/6545) can have the folder `heroes` with the `heroes.component.ts` and inside this folder we can have the folder `hero-item` with the component `hero-item.ts` which refers to the individual item. Remember that having too many nested components will come at a price. If you see this, consider flattening your structure.
 
-5. Consider adding a `globals.ts` file in the top for global app constants. [Typescript enums](https://github.com/angular/angular-cli/wiki/stories-application-environments) are also very helpful to store shared or component constants. Use the `shared` and component folders for them. This is different than the environment files which should contain settings for the environment.
+5. Consider adding an `app.globals.ts` file in the top for global app constants. [Typescript enums](https://github.com/angular/angular-cli/wiki/stories-application-environments) are also very helpful to store shared or component constants. Use the `shared` and component folders for them. This is different than the environment files which should contain settings for the environment.
 
-6. Consider adding a `directives`, `animations` and `pipes` folders in shared to reuse those features.
+6. Consider adding all configuration options to the environmental variables. [This link](https://github.com/angular/angular-cli/wiki/stories-application-environments) shows how to add more environmental variables using the CLI.
 
-7. Consider adding all configuration options to the environmental variables. [This link](https://github.com/angular/angular-cli/wiki/stories-application-environments) shows how to add more environmental variables using the CLI.
+![image alt text](image_0.png)
 
 ## <a id="docs"><a/>Documentation
 
@@ -87,7 +87,7 @@ Forms are so common in any web application and developers tend to repeat their p
 
 After starting a new project using sass as explained in the setup section, you can add an `scss` folder under the `source` folder. This folder will contain global styling modules and a variables file that you can import to your `styles.scss` master file. Each Angular component will also generate a sass file for component-specific-styles. In this way any code refactoring can be moved to a global style. BEM is a pattern that might be great to use for global styles. Component style classes are handled by Angular so [BEM](http://getbem.com/) is not needed but you might want to consider it for consistency.
 
-![image alt text](image_0.png)
+![image alt text](image_1.png)
 
 We really like to use [Angular Material](https://material.angular.io/) which comes with many common components like modals, sidenavs, tables, buttons. etc. Bootstrap and Foundation can also be used but we recommend choosing Angular specific libraries like [Prime Faces](https://www.primefaces.org/primeng/) from the UI Components in [Angular Resources](https://angular.io/resources).
 
