@@ -103,37 +103,33 @@ Here is a summary of the naming section in the Angular Style Guide.
 
 #### Rule of One
 
-- [ ] One thing per file (a service/component should focus on one thing only)
+- [x] One thing per file (a service/component should focus on one thing only)
+- [x] 400 lines max per file
 
-        * 400 lines max per file
+#### Small Functions
 
-    * Small Functions
+- [x] 75 lines max per function
 
-        * 75 lines max per function
+### Naming
 
-## Naming
+#### General
 
-    * General
+- [x] feature.type.ts
 
-        * feature.type.ts
+#### Separate file names with dots and dashes
 
-    * Separate file names with dots and dashes
+- [x] App-routing.module.ts, drag.service.ts, filter.pipe.ts, hover.directive.ts
+- [x] Abbreviations like car.serv.ts are confusing
 
-        * App-routing.module.ts, drag.service.ts, filter.pipe.ts, hover.directive.ts
+#### File names representation
 
-        * Abbreviations like car.serv.ts are confusing
+- [x] Classes:  class AppRoutingModule {} , class LoggingService {}, class InitCapsPipe {}
+- [x] Files: app-routing.module.ts, logging.service.ts, init-caps.pipe.ts
 
-    * File names representation
+#### Custom prefix for components and directives
 
-        * Classes:  class AppRoutingModule {} , class LoggingService {}, class InitCapsPipe {}
-
-        * Files: app-routing.module.ts, logging.service.ts, init-caps.pipe.ts
-
-    * Custom prefix for components and directives
-
-        * Use app-users instead of users
-
-        * Use [appAnimateHeight] (lower camel case)
+- [x] Use app-users instead of users
+- [x] Use [appAnimateHeight] (lower camel case)
 
 ## <a id="automation"><a/>Automation
 
