@@ -53,17 +53,17 @@ We prefer to setup a project using [Sass](http://sass-lang.com/) instead of CSS 
 
 The CLI already provides a basic structure for your app but you will have to make some decisions about the structure when the app gets more complex. It is recommended that you use the structure suggested in [Stack Overflow](https://stackoverflow.com/questions/35346342/which-type-of-folder-structure-should-be-used-with-angular-2). Here is a summary of it:
 
-1. A source folder with contain the codebase with index.html, main.ts file and the core, shared folders.
+1. A source folder with contain the codebase with `index.html`, `main.ts` file and the `core`, `shared` folders.
 
 2. Things that are always visible or used everywhere can go to the core folder (a footer component or an exception handler service).
 
-3. Components that are related with the URL can be nested in the root folder. Example URL [www.mywebsite.com/heroes/6545](www.mywebsite.com/hero/6545) can have the folder ‘heroes’ with the heroes.component.ts and inside this folder we can have the folder ‘hero-item’ with the component hero-item.ts which refers to the individual item. Remember that having too many nested components will come at a price. If you see this, consider flattening your structure.
+3. Components that are related with the URL can be nested in the `src` folder. Example URL [www.mywebsite.com/heroes/6545](www.mywebsite.com/hero/6545) can have the folder `heroes` with the `heroes.component.ts` and inside this folder we can have the folder `hero-item` with the component `hero-item.ts` which refers to the individual item. Remember that having too many nested components will come at a price. If you see this, consider flattening your structure.
 
-4. Services can be in the closest related component or the shared folder in a services folder.
+4. Services can be in the closest related component or the `shared` folder in a `services` folder.
 
-5. Consider adding a globals.ts file in the top for global app constants. [Typescript enums](https://github.com/angular/angular-cli/wiki/stories-application-environments) are also very helpful to store shared or component constants. Use the shared and component folders for them.
+5. Consider adding a `globals.ts` file in the top for global app constants. [Typescript enums](https://github.com/angular/angular-cli/wiki/stories-application-environments) are also very helpful to store shared or component constants. Use the `shared` and component folders for them. This is different than the environment files which should contain settings for the environment.
 
-6. Consider adding a directives, animations and pipes folders in shared to reuse those features.
+6. Consider adding a `directives`, `animations` and `pipes` folders in shared to reuse those features.
 
 7. Consider adding all configuration options to the environmental variables. [This link](https://github.com/angular/angular-cli/wiki/stories-application-environments) shows how to add more environmental variables using the CLI.
 
