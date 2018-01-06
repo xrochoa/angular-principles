@@ -7,25 +7,25 @@
 
 This document will provide general recommendations and links for common scenarios encountered when building a complex web application with Angular. Here at Fresh we have build many Angular apps successfully and this guide should help address many of those situations. Here are the topics covered:
 
-[Learning Resources](#learning_resources)
+[Learning Resources](#resources)
 
-Setup
+[Setup](#setup)
 
-File Organization
+[File Organization](#files)
 
-Documentation
+[Documentation](#docs)
 
-State Management
+[State Management](#state)
 
-Forms
+[Forms](#forms)
 
-CSS and Frameworks
+[CSS and Frameworks](#css)
 
-Code Style
+[Code Style](#code)
 
-Automation
+[Automation](#automation)
 
-## <a id="learning_resources"><a/>Learning Resources
+## <a id="resources"><a/>Learning Resources
 
 Angular 2 was rebranded as [Angular](https://angular.io/) since it is so different from Angular 1 or [AngularJS](https://angularjs.org/). The versions 2 - 5 and beyond should refer to Angular and not AngularJS. You should definitely have a good understanding of Javascript, HTML, CSS. Ideally you also know about NPM, Sass, and terminal (Bash or Powershell). You can start by taking the [Tour of Heroes Tutorial](https://angular.io/tutorial) if you haven’t already done so. There are [plenty of free learning resources](https://github.com/jmcunningham/AngularJS2-Learning) online. Some of our favorite ones are:
 
@@ -43,7 +43,7 @@ Angular 2 was rebranded as [Angular](https://angular.io/) since it is so differe
 
 * [Angular Resources](https://angular.io/resources)
 
-## Setup
+## <a id="setup"><a/> Setup
 
 For the smoothest experience use the official [Angular-CLI](https://cli.angular.io/). To install it from the command line you need to have [Node.js](https://nodejs.org/en/) which comes with [NPM](https://www.npmjs.com/) to manage your libraries/dependencies. It will create a project, scaffold the main files, setup unit and e2e testing and it has a lot of useful utilities that you can see in their [documentation](https://github.com/angular/angular-cli/wiki).
 
@@ -51,7 +51,7 @@ We prefer to setup a project using [Sass](http://sass-lang.com/) instead of css 
 
 Run the command ng new [my _new_project _name] --style sass in your prefered folder.
 
-##File Organization
+## <a id="files"><a/>File Organization
 
 The CLI already provides a basic structure for your app. It is recommended that you use the structure suggested in [Stack Overflow](https://stackoverflow.com/questions/35346342/which-type-of-folder-structure-should-be-used-with-angular-2). In a summary.
 
@@ -69,7 +69,7 @@ The CLI already provides a basic structure for your app. It is recommended that 
 
 7. Consider adding all configuration options to the environmental variables. [This link](https://github.com/angular/angular-cli/wiki/stories-application-environments) shows how to add more environmental variables using the CLI.
 
-## Documentation
+## <a id="docs"><a/>Documentation
 
 Simple and complex applications require good documentation. Try to use [API Blueprint](https://apiblueprint.org/) or [Swagger](https://swagger.io/) to make sure all the backend endpoints are properly explained and documented. These tools have many other tools available to auto generate documentation, join files, and stylize the documentation output. We have used some of these like [Hercule](https://github.com/jamesramsay/hercule), [Aglio](https://github.com/danielgtaylor/aglio), [NSwag](https://github.com/RSuter/NSwag), and [Apiary](https://apiary.io/).
 
@@ -77,15 +77,15 @@ Simple and complex applications require good documentation. Try to use [API Blue
 
 Make sure to include good comments in your code whenever there is an edge case or a decision that is not standard and point to the right location or link.
 
-## State Management
+## <a id="state"><a/>State Management
 
 State management might be one of the biggest source of bugs if not handled properly. If you want to delegate this responsibility to a [Redux](https://redux.js.org/) pattern you can use [@ngrx/store](https://github.com/ngrx/store). For our projects we prefered to manage state manually using Angular Services with an [observable based pattern](https://coryrylan.com/blog/angular-observable-data-services). It is also important to differentiate between the many places where state gets stored. You can store state in a URL, local Storage, backend, memory, etc. It is recommended to have a single source of truth and well thought syncing and error handling strategy. [Managing State in Angular Applications](https://blog.nrwl.io/managing-state-in-angular-applications-22b75ef5625f) is a great resource to understand when and where to store state.
 
-## Forms
+## <a id="forms"><a/>Forms
 
 Forms are so common in any web application and developers tend to repeat their patterns when switching between frameworks. Angular provides a whole library that makes it really easy to validate and store forms and it is the recommended pattern in an Angular Application. Here is a [Fundamentals Tutorial](https://toddmotto.com/angular-2-forms-reactive) on how to use Reactive Forms.
 
-## CSS and Frameworks
+## <a id="css"><a/>CSS and Frameworks
 
 After starting a new project using sass as explained in the setup section, you can add an scss folder under the source folder. This folder will contain global styling modules and a variables file that you can import to your styles.scss master file. Each Angular component will also generate a sass file for component-specific-styles. In this way any code refactoring can be moved to a global style. BEM is a pattern that might be great to use for global styles. Component style classes are handled by Angular so [BEM](http://getbem.com/) is not needed but you might want to consider it for consistency.
 
@@ -95,7 +95,7 @@ We really like to use [Angular Material](https://material.angular.io/)** **which
 
 Layout is a very important aspect in the UI of our app and we chose [Angular Flex-Layout](https://github.com/angular/flex-layout). This frameworks moves all the layout related properties to a template so we stop using them in the CSS realm.
 
-## Code Style
+## <a id="code"><a/>Code Style
 
 It is recommended to follow Javascript best practices and follow the [Angular Style Guide](https://angular.io/guide/styleguide). It contains the reasoning behind each Rule which each great for a better understanding of Angular. The CLI comes with [TSLint](https://palantir.github.io/tslint/) which checks code guidelines when running ng lint. It is a good idea to install a visual linter on you IDE to visualize any error. Make sure you use the [.editorconfig](http://editorconfig.org/) file which ensures that every developer editing the codebase will use the same indentation, charset and line length rules.
 
@@ -137,7 +137,7 @@ Here is a summary of the naming section in the Angular Style Guide.
 
         * Use [appAnimateHeight] (lower camel case)
 
-## Automation
+## <a id="automation"><a/>Automation
 
 Consider automating some steps in the process of creating Pull Request. If you are using Bitbucket, use pipelines to automate Linting, Unit Testing and E2E testing. You can also use pipelines to push your latest documentation and the build of your code automatically to a dedicated server. You can read more about it in [this blog](https://www.freshconsulting.com/you-should-be-using-bitbucket-pipelines/).
 
