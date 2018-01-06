@@ -65,7 +65,7 @@ The CLI already provides a basic structure for your app but you will have to mak
 
 6. Consider adding all configuration options to the environmental variables. [This link](https://github.com/angular/angular-cli/wiki/stories-application-environments) shows how to add more environmental variables using the CLI.
 
-![image alt text](image_0.png)
+![image alt text](image_1.png)
 
 ## <a id="docs"><a/>Documentation
 
