@@ -25,6 +25,9 @@ This document will provide general recommendations and links for common scenario
 
 [Automation](#automation)
 
+[Updating](#updating)
+
+
 ## <a id="resources"><a/>Learning Resources
 
 Angular 2 was rebranded as [Angular](https://angular.io/) since it is so different from Angular 1 or [AngularJS](https://angularjs.org/). The versions 2 - 5 and beyond should refer to Angular and not AngularJS. You should definitely have a good understanding of Javascript, HTML, CSS. Ideally you also know about NPM, Sass, and terminal (Bash or Powershell). You can start by taking the [Tour of Heroes Tutorial](https://angular.io/tutorial) if you haven’t already done so. There are [plenty of free learning resources](https://github.com/jmcunningham/AngularJS2-Learning) online. Some of our favorite ones are:
@@ -135,3 +138,6 @@ Here is a summary of the naming section in the Angular Style Guide.
 
 Consider automating some steps in the process of creating Pull Request. If you are using Bitbucket, use pipelines to automate Linting, Unit Testing and E2E testing. You can also use pipelines to push your latest documentation and the build of your code automatically to a dedicated server. You can read more about it in [this blog](https://www.freshconsulting.com/you-should-be-using-bitbucket-pipelines/).
 
+## <a id="updating"><a/>Updating
+
+Angular might update frequently so consider updating your app as soon as a new version comes out. You will have more control over new features than updating later when a lot of functionality that is deprecated can break your app.
