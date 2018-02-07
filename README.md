@@ -27,6 +27,8 @@ This document will provide general recommendations and links for common scenario
 
 [Updating](#updating)
 
+[Testing](#testing)
+
 [Lazy Loading a Module](#lazy)
 
 
@@ -143,6 +145,14 @@ Consider automating some steps in the process of creating Pull Request. If you a
 ## <a id="updating"><a/>Updating
 
 Angular might update frequently so consider updating your app as soon as a new version comes out. You will have more control over new features than updating later when a lot of functionality that is deprecated can break your app.
+
+## <a id="testing"><a/>Testing
+
+The Angular CLI creates files for unit tests after creating a component, service, pipe, etc. You can run them with `ng test` which uses Jamine and Karma.
+
+E2E tests are also available and run with`ng e2e` which uses Protractor. Another alternative to Protractor is [Testcafe](https://github.com/DevExpress/testcafe). We recommend Testcafe over Protractor since it gave us more predictable results.
+
+You can also create a pipeline that runs these tests after each Pull Request is merged to ensure the code is working well. The unit tests can be run against headless Chrome in a Docker container and the e2e tests can be run against Browserstack.
 
 ## <a id="lazy"><a/>Lazy Loading a Module
 
