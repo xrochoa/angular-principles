@@ -84,7 +84,7 @@ State management might be one of the biggest source of bugs if not handled prope
 
 ## <a id="forms"><a/>Forms
 
-Forms are so common in any web application and developers tend to repeat their patterns when switching between frameworks. Angular provides a whole library that makes it really easy to validate and store forms and it is the recommended pattern in an Angular Application. Here is a [Fundamentals Tutorial](https://toddmotto.com/angular-2-forms-reactive) on how to use Reactive Forms.
+Forms are very common in web applications. Angular provides a library that makes it really easy to validate and store forms. There are 2 approaches when working with Angular forms: Template driven forms and Reactive forms. Template driven forms are easy and similar to AngularJS but we prefer Reactive forms since they are more flexible, they allow rxjs event based transformations like debounceTime and distinctUntilChanged, and they are easy to unit test. Here is a [Fundamentals Tutorial](https://toddmotto.com/angular-2-forms-reactive) on how to use Reactive Forms.
 
 ## <a id="css"><a/>CSS and Frameworks
 
