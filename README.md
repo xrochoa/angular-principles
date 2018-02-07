@@ -27,6 +27,8 @@ This document will provide general recommendations and links for common scenario
 
 [Updating](#updating)
 
+[Lazy Loading a Module](#lazy)
+
 
 ## <a id="resources"><a/>Learning Resources
 
@@ -141,3 +143,7 @@ Consider automating some steps in the process of creating Pull Request. If you a
 ## <a id="updating"><a/>Updating
 
 Angular might update frequently so consider updating your app as soon as a new version comes out. You will have more control over new features than updating later when a lot of functionality that is deprecated can break your app.
+
+## <a id="lazy"><a/>Lazy Loading a Module
+
+Modules can be loaded based on the change of route in order to reduce startup time. This might not be necessary in enterprise apps but would be very useful for any public facing app. You can read more about it in this [Ragle.io Tutorial](https://angular-2-training-book.rangle.io/handout/modules/lazy-loading-module.html)
